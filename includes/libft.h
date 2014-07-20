@@ -6,7 +6,7 @@
 /*   By: fgundlac <fgundlac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 10:51:44 by fgundlac          #+#    #+#             */
-/*   Updated: 2014/07/20 18:07:23 by fgundlac         ###   ########.fr       */
+/*   Updated: 2014/07/20 19:18:48 by fgundlac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,9 @@ void			ft_lstadd_back(t_List **lst, t_List *new);
 void			ft_lstfree(t_List *lst);
 t_List			*ft_lst_remove(t_List *lst,
 					int (*comp_fun)(void *, void *), void *const b);
+int				ft_in_lst(t_List *lst,
+					int (*fun_comp)(void *, void *), void *const b);
+
 
 
 #endif

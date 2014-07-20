@@ -6,7 +6,7 @@
 #    By: fgundlac <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/11 02:34:50 by fgundlac          #+#    #+#              #
-#    Updated: 2014/07/20 18:40:16 by fgundlac         ###   ########.fr        #
+#    Updated: 2014/07/20 19:19:31 by fgundlac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ SRC =	ft_bzero.c ft_memccpy.c ft_memchr.c ft_memcpy.c ft_memset.c \
 		ft_lstadd_front.c \
 		ft_lstadd_back.c \
 		ft_lstfree.c \
-		ft_lst_remove.c
+		ft_lst_remove.c \
+		ft_in_lst.c
 
 OBJ = $(patsubst %.c, $(PATH_OBJ)/%.o, $(SRC))
 
