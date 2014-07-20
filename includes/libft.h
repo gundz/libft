@@ -6,7 +6,7 @@
 /*   By: fgundlac <fgundlac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 10:51:44 by fgundlac          #+#    #+#             */
-/*   Updated: 2014/02/10 22:01:14 by fgundlac         ###   ########.fr       */
+/*   Updated: 2014/07/20 18:07:23 by fgundlac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,5 +109,8 @@ t_List			*ft_lstnew(void *content, int size);
 void			ft_lstadd_front(t_List **lst, t_List *new);
 void			ft_lstadd_back(t_List **lst, t_List *new);
 void			ft_lstfree(t_List *lst);
+t_List			*ft_lst_remove(t_List *lst,
+					int (*comp_fun)(void *, void *), void *const b);
+
 
 #endif
