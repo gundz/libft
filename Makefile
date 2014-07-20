@@ -6,7 +6,7 @@
 #    By: fgundlac <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/11 02:34:50 by fgundlac          #+#    #+#              #
-#    Updated: 2014/07/20 19:37:13 by fgundlac         ###   ########.fr        #
+#    Updated: 2014/07/20 19:52:20 by fgundlac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC =	ft_bzero.c ft_memccpy.c ft_memchr.c ft_memcpy.c ft_memset.c \
 		ft_strmap.c ft_strmapi.c ft_cacat.c ft_fgets.c ft_tablen.c \
 		ft_char_to_str.c ft_strrev.c ft_intab.c ft_get_next_line.c \
 		ft_str_uniq.c ft_puttab.c ft_add_tab.c ft_free_tab.c \
+		get_max.c \
 		ft_lstnew.c \
 		ft_lstadd_front.c \
 		ft_lstadd_back.c \

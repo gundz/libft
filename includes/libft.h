@@ -6,7 +6,7 @@
 /*   By: fgundlac <fgundlac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 10:51:44 by fgundlac          #+#    #+#             */
-/*   Updated: 2014/07/20 19:18:48 by fgundlac         ###   ########.fr       */
+/*   Updated: 2014/07/20 19:52:12 by fgundlac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ char	**ft_str_uniq(char **tab);
 void	ft_puttab(char **tab);
 char	**ft_add_tab(char **tab, char *str);
 void	ft_free_tab(char **tab);
+int		get_max(int a, int b);
 
 # define ENDL			ft_strnstr(buf + val.j, "\n", val.ret - val.j)
 # define BUFF_SIZE		4096
