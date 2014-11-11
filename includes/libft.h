@@ -6,7 +6,7 @@
 /*   By: fgundlac <fgundlac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 10:51:44 by fgundlac          #+#    #+#             */
-/*   Updated: 2014/07/20 19:52:12 by fgundlac         ###   ########.fr       */
+/*   Updated: 2014/11/11 19:06:53 by fgundlac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ int							ft_strcmp(const char *s1, const char *s2);
 char						*ft_strdup(const char *const str);
 char						*ft_strcat(char *dest, const char *const src);
 char						*ft_strjoin(char *str, char *strc);
+char						**ft_strsplit(char *str, char c);
 
 #endif
