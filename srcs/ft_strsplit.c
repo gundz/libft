@@ -6,7 +6,7 @@
 /*   By: fgundlac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/11 18:28:26 by fgundlac          #+#    #+#             */
-/*   Updated: 2014/11/11 19:06:36 by fgundlac         ###   ########.fr       */
+/*   Updated: 2014/11/11 20:04:45 by fgundlac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ static char				**split(char *str, char c, char **tab)
 char					**ft_strsplit(char *str, char c)
 {
 	char				**tab;
-	int					nb_words;
 
 	if (str == NULL)
 		return (NULL);

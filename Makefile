@@ -6,7 +6,7 @@
 #    By: fgundlac <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/11 02:34:50 by fgundlac          #+#    #+#              #
-#    Updated: 2014/07/20 19:52:20 by fgundlac         ###   ########.fr        #
+#    Updated: 2014/11/11 20:04:26 by fgundlac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRC =	\
 		ft_strdup.c \
 		ft_strcat.c \
 		ft_strjoin.c \
+		ft_strsplit.c \
 
 SRC +=	\
 		lst_create_elem.c \
