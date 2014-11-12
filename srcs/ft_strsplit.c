@@ -56,7 +56,7 @@ static char				**split(char *str, char c, char **tab)
 		i += j;
 		k++;
 	}
-	tab[k] = '\0';
+	tab[k] = NULL;
 	return (tab);
 }
 

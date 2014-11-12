@@ -3,33 +3,37 @@
 
 #include <stdarg.h>
 
-#define INTEGER int
-
 typedef struct s_opp
 {
 	char		*op;
-	char		*type;
 	void		(*f)();
-}				t_opp;
+}			t_opp;
+
+void			ft_put_int(va_list *ap)
+{
+	int		nb;
+
+	nb = va_arg(*ap, int);
+	ft_putnbr(nb);
+}
 
 t_opp			gl_opptab[] =
 {
-	{"d", "INTEGER", &ft_putnbr},
+	{"d", &ft_putnbr},
 };
 
-void				ft_printf(char *format, ...)
+void			ft_printf(char *format, ...)
 {
-	va_list			ap;
-	int				var;
-	int				i = 0;
+	va_list		ap;
+	int		var;
+	int		i = 0;
 
 	va_start(ap, format);
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
-			var = va_arg(ap, gl_opptab[0].type);
-			gl_opptab[0].f(var);
+			gl_opptab[0].f(ap);
 		}
 		i++;
 	}
@@ -37,6 +41,6 @@ void				ft_printf(char *format, ...)
 
 int				main(void)
 {
-	ft_printf("%% ", 10, 10);
+	ft_printf("% %", 10, 20);
 	return (0);
 }
