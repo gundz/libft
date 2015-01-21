@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgundlac <fgundlac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 18:05:44 by fgundlac          #+#    #+#             */
-/*   Updated: 2013/11/25 16:54:19 by fgundlac         ###   ########.fr       */
+/*   Created: 2013/11/26 16:41:37 by fgundlac          #+#    #+#             */
+/*   Updated: 2013/12/26 03:39:31 by fgundlac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include <stddef.h>
 
-char	*ft_strdup(const char *str)
+int				ft_strcmp(const char *s1, const char *s2)
 {
-	char		*dup;
+	size_t		i;
 
-	if (str == NULL)
-		return (NULL);
-	if ((dup = malloc(sizeof(char) * ft_strlen((char *)str + 1))) == NULL)
-			return (NULL);
-	dup = ft_memcpy(dup, str, ft_strlen((char *)str));
-	return (dup);
+	if (s1 == NULL || s2 == NULL)
+		return (-1);
+	i = 0;
+	while ((s1[i] != '\0' || s2[i] != '\0'))
+	{
+		if ((unsigned char)s1[i] != (unsigned char)s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	return (0);
 }

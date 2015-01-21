@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgundlac <fgundlac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fgundlac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 14:24:01 by fgundlac          #+#    #+#             */
-/*   Updated: 2013/11/25 16:54:26 by fgundlac         ###   ########.fr       */
+/*   Created: 2014/11/11 18:28:58 by fgundlac          #+#    #+#             */
+/*   Updated: 2014/11/11 18:28:59 by fgundlac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include <unistd.h>
 
-char	*ft_strcat(char *dest, const char *src)
+void					ft_putendl(const char *const str)
 {
-	int		i;
+	unsigned int		len;
 
-	if (dest == NULL || src == NULL)
-		return (NULL);
-	i = ft_strlen(dest);
-	while (*src != '\0')
-	{
-		dest[i++] = *src++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	write(1, str, len);
+	write(1, "\n", 1);
 }

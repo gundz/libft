@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgundlac <fgundlac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fgundlac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 20:57:46 by fgundlac          #+#    #+#             */
-/*   Updated: 2013/11/21 21:01:05 by fgundlac         ###   ########.fr       */
+/*   Created: 2014/11/11 18:28:53 by fgundlac          #+#    #+#             */
+/*   Updated: 2014/11/11 18:28:53 by fgundlac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include <unistd.h>
 
-void	ft_putstr_fd(char const *str, int fd)
+void					ft_putchar_fd(char c, int fd)
 {
-	while (*str != '\0')
-	{
-		ft_putchar_fd(*str, fd);
-		str++;
-	}
+	write(fd, &c, 1);
 }

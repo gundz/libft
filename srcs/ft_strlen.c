@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgundlac <fgundlac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fgundlac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 11:03:19 by fgundlac          #+#    #+#             */
-/*   Updated: 2013/12/01 21:17:50 by fgundlac         ###   ########.fr       */
+/*   Created: 2014/11/11 18:31:07 by fgundlac          #+#    #+#             */
+/*   Updated: 2014/11/11 18:31:08 by fgundlac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include <stddef.h>
 
-void	ft_putstr(char const *str)
+size_t							ft_strlen(const char *const str)
 {
-	if (str == NULL)
-		return ;
-	while (*str != '\0')
-	{
-		ft_putchar(*str);
-		str++;
-	}
+	unsigned int				len;
+
+	len = 0;
+	while (str[len] != '\0')
+		++len;
+	return (len);
 }

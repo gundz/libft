@@ -3,30 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgundlac <fgundlac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fgundlac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/25 18:54:32 by fgundlac          #+#    #+#             */
-/*   Updated: 2013/12/13 20:53:13 by fgundlac         ###   ########.fr       */
+/*   Created: 2014/11/11 18:29:54 by fgundlac          #+#    #+#             */
+/*   Updated: 2014/11/11 18:29:55 by fgundlac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
-#include	<stdlib.h>
+#include <libft.h>
+#include <stdlib.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char							*ft_strjoin(char *dest, char *src)
 {
-	int		i;
-	char	*result;
+	unsigned int				len1;
+	unsigned int				len2;
+	char						*ret;
 
-	if (s1 == NULL || s2 == NULL)
+	len1 = ft_strlen(dest);
+	len2 = ft_strlen(src);
+	if (!(ret = (char *)malloc(sizeof(char) * (len1 + len2 + 1))))
 		return (NULL);
-	i = 0;
-	result = malloc(sizeof(char) *
-			(ft_strlen((char *)s1 + ft_strlen((char *)s2) + 1)));
-	while (*s1 != '\0')
-		result[i++] = *s1++;
-	while (*s2 != '\0')
-		result[i++] = *s2++;
-	result[i] = '\0';
-	return (result);
+	ret = ft_strcat(dest, src);
+	return (ret);
 }
