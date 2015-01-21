@@ -34,7 +34,8 @@ SRC =	\
 		ft_strncpy.c \
 		ft_strdup.c \
 		ft_strcat.c \
-		ft_strjoin.c \
+	        ft_strijoin.c \
+                ft_strjoin.c \
 		ft_strsplit.c \
 
 SRC +=	\
