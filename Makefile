@@ -35,7 +35,8 @@ SRC =	\
 		ft_strdup.c \
 		ft_strcat.c \
 		ft_strjoin.c \
-		ft_strsplit.c \
+		ft_strijoin.c \
+                ft_strsplit.c \
 
 SRC +=	\
 		lst_create_elem.c \
