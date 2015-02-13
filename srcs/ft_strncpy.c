@@ -23,6 +23,7 @@ char					*ft_strncpy(char *dest, char *src, size_t n)
 		i++;
 		n--;
 	}
+	dest[i] = '\0';
 	while (n > 0)
 	{
 		dest[i++] = '\0';
