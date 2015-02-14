@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 CC = clang
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -o3
 NAME = libft.a
 PATH_INC = includes
 PATH_OBJ = obj
