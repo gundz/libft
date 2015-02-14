@@ -29,12 +29,14 @@ char						*ft_strcpy(char *dest, const char *src);
 char						*ft_strncpy(char *dest, char *src, size_t n);
 
 size_t						ft_strlen(const char *str);
-int						ft_strcmp(const char *s1, const char *s2);
+int							ft_strcmp(const char *s1, const char *s2);
 
 char						*ft_strdup(const char *const str);
 char						*ft_strcat(char *dest, const char *const src);
 char						*ft_strjoin(char *str, char *strc);
-char                                            *ft_strijoin(unsigned int n, ...);
+char						*ft_strijoin(unsigned int n, ...);
 char						**ft_strsplit(char *str, char c);
+
+unsigned int				ft_ctablen(const char **const tab);
 
 #endif
