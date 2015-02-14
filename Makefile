@@ -39,6 +39,7 @@ SRC =	\
 		ft_strsplit.c \
 		\
 		ft_ctablen.c \
+		ft_freectab.c \
 
 SRC +=	\
 		lst_create_elem.c \

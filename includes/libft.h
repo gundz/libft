@@ -38,5 +38,6 @@ char						*ft_strijoin(unsigned int n, ...);
 char						**ft_strsplit(char *str, char c);
 
 unsigned int				ft_ctablen(const char **const tab);
+void						ft_freectab(char **tab);
 
 #endif
