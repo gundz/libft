@@ -6,6 +6,6 @@ void					ft_freectab(char **tab)
 
 	i = 0;
 	while (tab[i] != NULL)
-		free(tab[i]);
+		free(tab[i++]);
 	free(tab);
 }
