@@ -6,6 +6,6 @@ unsigned int				ft_ctablen(const char **const tab)
 
 	len = 0;
 	while (tab[len] != NULL)
-		tab[len]++;
+		len++;
 	return (len);
 }
