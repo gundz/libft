@@ -1,51 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strijoin.c                                      :+:      :+:    :+:   */
+/*   lst_to_char.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgundlac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/18 09:53:35 by fgundlac          #+#    #+#             */
-/*   Updated: 2015/03/18 09:55:29 by fgundlac         ###   ########.fr       */
+/*   Created: 2015/03/17 21:01:53 by fgundlac          #+#    #+#             */
+/*   Updated: 2015/03/17 21:01:54 by fgundlac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <stdarg.h>
 #include <stdlib.h>
 
-static unsigned int		join_len(va_list ap, unsigned int n)
+char					*lst_to_char(t_list *lst)
 {
-	va_list				ap2;
-	unsigned int		len;
-
-	va_copy(ap2, ap);
-	len = 0;
-	while (n--)
-		len += ft_strlen(va_arg(ap2, char *));
-	return (len);
-}
-
-char					*ft_strijoin(unsigned int n, ...)
-{
-	va_list				ap;
-	unsigned int		len;
-	char				*ret;
+	t_list				*lstwalker;
 	char				*tmp;
-	unsigned int		i;
+	char				*ret;
+	int					i;
+	int					j;
 
-	va_start(ap, n);
-	len = join_len(ap, n);
-	if (!(ret = (char *)malloc(sizeof(char) * (len + 1))))
+	if (!(ret = (char *)malloc(sizeof(char) * (lst_csize(lst) + 1))))
 		return (NULL);
+	lstwalker = lst;
 	i = 0;
-	while (n--)
+	while (lstwalker != NULL)
 	{
-		tmp = va_arg(ap, char *);
-		while (*tmp != '\0')
-			ret[i++] = *tmp++;
+		tmp = lstwalker->data;
+		j = 0;
+		while (tmp[j] != '\0')
+			ret[i++] = tmp[j++];
+		if (lstwalker->next == NULL)
+			break ;
+		lstwalker = lstwalker->next;
 	}
 	ret[i] = '\0';
-	va_end(ap);
 	return (ret);
 }

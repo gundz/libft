@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ctablen.c                                       :+:      :+:    :+:   */
+/*   lst_free.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgundlac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/18 09:53:16 by fgundlac          #+#    #+#             */
-/*   Updated: 2015/03/18 09:53:18 by fgundlac         ###   ########.fr       */
+/*   Created: 2015/03/18 09:38:04 by fgundlac          #+#    #+#             */
+/*   Updated: 2015/03/18 09:38:05 by fgundlac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <libft.h>
+#include <stdlib.h>
 
-unsigned int				ft_ctablen(const char **const tab)
+void				lst_free(t_list *lst, const int free_data)
 {
-	unsigned int			len;
+	t_list			*tmp;
 
-	len = 0;
-	while (tab[len] != NULL)
-		len++;
-	return (len);
+	while (lst != NULL)
+	{
+		if (lst->next == NULL)
+			break ;
+		tmp = lst->next;
+		if (free_data == 1)
+			free(lst->data);
+		free(lst);
+		lst = tmp;
+	}
+	free(lst);
 }

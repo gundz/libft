@@ -6,12 +6,12 @@
 #    By: fgundlac <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/11 02:34:50 by fgundlac          #+#    #+#              #
-#    Updated: 2014/11/11 20:04:26 by fgundlac         ###   ########.fr        #
+#    Updated: 2015/03/18 10:05:13 by fgundlac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = clang
-CFLAGS = -Wall -Werror -Wextra -o3
+CFLAGS = -Wall -Werror -Wextra -O3
 NAME = libft.a
 PATH_INC = includes
 PATH_OBJ = obj
@@ -44,8 +44,11 @@ SRC =	\
 SRC +=	\
 		lst_create_elem.c \
 		lst_push_back.c \
+		lst_csize.c \
 		lst_count.c \
-		lst_sort.c \
+		lst_b_sort.c \
+		lst_free.c \
+		lst_to_char.c \
 
 OBJ = $(patsubst %.c, $(PATH_OBJ)/%.o, $(SRC))
 
