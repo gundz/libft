@@ -38,7 +38,7 @@ void				thread_it(t_thread *thread);
 t_thread			*get_thread(const int nb_thread, t_tab *const tab,
 		void *const data, void *(*f)(void *, int, int));
 
-t_tab				*get_tab(const int x, const int y, const int init);
-void				free_tab(t_tab *tab);
+t_tab				*get_t_tab(const int x, const int y, const int init);
+void				free_t_tab(t_tab *tab);
 
 #endif

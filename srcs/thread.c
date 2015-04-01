@@ -75,7 +75,7 @@ void				thread_it(t_thread *thread)
 	}
 }
 
-t_tab				*get_tab(const int x, const int y, const int init)
+t_tab				*get_t_tab(const int x, const int y, const int init)
 {
 	t_tab			*tab;
 	int				i;
@@ -100,7 +100,7 @@ t_tab				*get_tab(const int x, const int y, const int init)
 	return (tab);
 }
 
-void				free_tab(t_tab *tab)
+void				free_t_tab(t_tab *tab)
 {
 	int				i;
 
