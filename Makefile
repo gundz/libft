@@ -6,12 +6,12 @@
 #    By: fgundlac <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/11 02:34:50 by fgundlac          #+#    #+#              #
-#    Updated: 2015/03/18 10:05:13 by fgundlac         ###   ########.fr        #
+#    Updated: 2015/04/01 05:01:40 by fgundlac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = clang
-CFLAGS = -Wall -Werror -Wextra -O3
+CFLAGS = -Wall -Werror -Wextra -Ofast
 NAME = libft.a
 PATH_INC = includes
 PATH_OBJ = obj
@@ -49,6 +49,9 @@ SRC +=	\
 		lst_b_sort.c \
 		lst_free.c \
 		lst_to_char.c \
+
+SRC +=	\
+		thread.c \
 
 OBJ = $(patsubst %.c, $(PATH_OBJ)/%.o, $(SRC))
 
