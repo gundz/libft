@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 CC = clang
-CFLAGS = -Wall -Werror -Wextra -Ofast
+CFLAGS = -Wall -Werror -Wextra -g
 NAME = libft.a
 PATH_INC = includes
 PATH_OBJ = obj
@@ -55,6 +55,9 @@ SRC +=	\
 SRC +=	\
 		thread.c \
 		t_tab_thread.c \
+
+SRC +=	\
+		get_next_line.c \
 
 OBJ = $(patsubst %.c, $(PATH_OBJ)/%.o, $(SRC))
 
