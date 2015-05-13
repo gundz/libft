@@ -40,6 +40,8 @@ char						**ft_strsplit(char *str, char c);
 char						*ft_itoa(int n);
 char						*ft_strrev(char *str);
 
+int							ft_atoi(const char *str);
+
 unsigned int				ft_ctablen(const char **const tab);
 void						ft_freectab(char **tab);
 

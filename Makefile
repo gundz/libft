@@ -25,6 +25,8 @@ SRCS =			\
 				ft_itoa.c \
 				ft_strrev.c \
 				\
+				ft_atoi.c \
+				\
 				ft_ctablen.c \
 				ft_freectab.c \
 
