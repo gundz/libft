@@ -32,6 +32,10 @@ char						*ft_strncpy(char *dest, char *src, size_t n);
 size_t						ft_strlen(const char *str);
 int							ft_strcmp(const char *s1, const char *s2);
 
+int							ft_strncmp(const char *s1, const char *s2, size_t n);
+char						*ft_strnstr(const char *s1, const char *s2, size_t n);
+
+
 char						*ft_strdup(const char *const str);
 char						*ft_strcat(char *dest, const char *const src);
 char						*ft_strjoin(char *str, char *strc);
