@@ -23,6 +23,7 @@ SRCS =			\
 				ft_strcat.c \
 				ft_strjoin.c \
 				ft_strijoin.c \
+				ft_strsub.c \
 				ft_strsplit.c \
 				ft_itoa.c \
 				ft_strrev.c \
