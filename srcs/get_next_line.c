@@ -13,9 +13,8 @@
 #include <libft.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include "get_next_line.h"
+#include <get_next_line.h>
 
-#include <stdio.h>
 int					find_n(t_list *lst, int eof)
 {
 	int				i;
@@ -45,23 +44,6 @@ int					find_n(t_list *lst, int eof)
 	if (str[j] == '\0')
 		return (-1);
 	return (i);
-}
-
-char				*ft_strsub(char const *s, unsigned int start, size_t len)
-{
-	char			*fresh;
-	size_t			i;
-
-	if (!(fresh = (char *)malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		fresh[i] = s[i + start];
-		i++;
-	}
-	fresh[i] = '\0';
-	return (fresh);
 }
 
 char				*get_line(t_list **lst, int *n)
