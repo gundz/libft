@@ -73,13 +73,13 @@ EMPTY =
 all: libs name $(OBJ) done $(NAME)
 
 name :
-	@ echo "\033[4;7mCompiling Objects:\033[0m "
+	@ echo "\033[4;7mCompiling Objects:\033[0m [$(NAME)]"
 
 done :
 	@ echo "\n\033[4m\033[95md\033[93mo\033[32mn\033[96me\033[0m \033[91m!\033[0m\n"
 
 $(NAME): $(OBJ)
-	@ echo "\033[4;7mCompiling:\033[0m [$(NAME)]"
+	@ echo "\033[4;7mCompiling binary:\033[0m [$(NAME)]"
 ifeq ($(TYPE), LIB)
 	@ ar -rc $(NAME) $(OBJ)
 	@ ranlib $(NAME)
@@ -117,4 +117,4 @@ endif
 
 re: fclean all
 
-.PHONY: all clean fclean re libs
+.PHONY: name clean fclean libs
