@@ -50,4 +50,6 @@ int							ft_atoi(const char *str);
 unsigned int				ft_ctablen(const char **const tab);
 void						ft_freectab(char **tab);
 
+char						*ft_basename(char *path);
+
 #endif

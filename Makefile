@@ -49,6 +49,9 @@ SRCS +=			\
 SRCS +=			\
 				get_next_line.c \
 
+SRCS +=			\
+				ft_basename.c \
+
 CC =			gcc
 
 CFLAGS =		-Wall -Werror -Wextra
