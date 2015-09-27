@@ -33,8 +33,8 @@ size_t						ft_strlen(const char *str);
 int							ft_strcmp(const char *s1, const char *s2);
 
 int							ft_strncmp(const char *s1, const char *s2, size_t n);
+char						*ft_strstr(const char *s1, const char *s2);
 char						*ft_strnstr(const char *s1, const char *s2, size_t n);
-
 
 char						*ft_strdup(const char *const str);
 char						*ft_strcat(char *dest, const char *const src);
@@ -47,7 +47,7 @@ char						*ft_strrev(char *str);
 
 int							ft_atoi(const char *str);
 
-unsigned int				ft_ctablen(const char **const tab);
+unsigned int				ft_ctablen(char **const tab);
 void						ft_freectab(char **tab);
 
 char						*ft_basename(char *path);
