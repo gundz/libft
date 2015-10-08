@@ -40,7 +40,8 @@ char						*ft_strdup(const char *const str);
 char						*ft_strcat(char *dest, const char *const src);
 char						*ft_strjoin(char *str, char *strc);
 char						*ft_strijoin(unsigned int n, ...);
-char						*ft_strsub(char const *s, unsigned int start, size_t len);
+char						*ft_strsub(char const *s, unsigned int start, \
+	size_t len);
 char						**ft_strsplit(char *str, char c);
 char						*ft_itoa(int n);
 char						*ft_strrev(char *str);
