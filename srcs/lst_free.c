@@ -27,6 +27,8 @@ void				lst_free(t_list **lst, const int free_data)
 		free(*lst);
 		*lst = tmp;
 	}
+	if (free_data == 1)
+		free((*lst)->data);
 	free(*lst);
 	*lst = NULL;
 }

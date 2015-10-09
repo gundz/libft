@@ -57,7 +57,7 @@ SRCS +=			\
 
 CC =			gcc
 
-CFLAGS =		-Wall -Werror -Wextra
+CFLAGS =		-Wall -Werror -Wextra -g
 
 #LIB_NAMES =		-lfoo -lbar
 #LIB_PATH =		./libfoo/ ./libbar/

@@ -19,14 +19,12 @@ int					find_n(t_list *lst, int eof)
 {
 	int				i;
 	int				j;
-	t_list			*lstwalker;
 	char			*str;
 
 	i = 0;
-	lstwalker = lst;
-	while (lstwalker != NULL)
+	while (lst != NULL)
 	{
-		str = lstwalker->data;
+		str = lst->data;
 		j = 0;
 		while (str[j] != '\0')
 		{
@@ -34,9 +32,9 @@ int					find_n(t_list *lst, int eof)
 				return (i + j);
 			j++;
 		}
-		if (lstwalker->next == NULL)
+		if (lst->next == NULL)
 			break ;
-		lstwalker = lstwalker->next;
+		lst = lst->next;
 		i += j;
 	}
 	if (eof == 0)
@@ -55,7 +53,6 @@ char				*get_line(t_list **lst, int *n)
 
 	tmp = lst_to_char(*lst);
 	n2 = find_n(*lst, *n);
-	lst_free(lst, 1);
 	ret = ft_strsub(tmp, 0, n2);
 	if (tmp[n2] == '\n')
 		n2++;
@@ -66,6 +63,7 @@ char				*get_line(t_list **lst, int *n)
 		*n = 1;
 	else
 		*n = 0;
+	lst_free(lst, 1);
 	return (ret);
 }
 
