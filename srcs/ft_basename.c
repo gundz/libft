@@ -16,7 +16,9 @@ char					*ft_basename(char *path)
 	int					end;
 
 	end = 0;
-	while (path[++end] != '\0');
+	while (path[++end] != '\0')
+	{
+	}
 	end--;
 	if (path[0] == '/' && end == 0)
 		return (path);
