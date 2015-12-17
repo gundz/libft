@@ -15,14 +15,20 @@
 
 char							*ft_strjoin(char *dest, char *src)
 {
-	unsigned int				len1;
-	unsigned int				len2;
-	char						*ret;
+	const int		size = ft_strlen(dest) + ft_strlen(src) + 1;
+	char			*ret;
+	int				i;
+	int				j;
 
-	len1 = ft_strlen(dest);
-	len2 = ft_strlen(src);
-	if (!(ret = (char *)malloc(sizeof(char) * (len1 + len2 + 1))))
+	if (!(ret = (char *)malloc(sizeof(char) * (size))))
 		return (NULL);
-	ret = ft_strcat(dest, src);
+	j = 0;
+	i = 0;
+	while (dest[i] != '\0')
+		ret[j++] = dest[i++];
+	i = 0;
+	while (src[i] != '\0')
+		ret[j++] = src[i++];
+	ret[j] = '\0';
 	return (ret);
 }

@@ -50,7 +50,6 @@ SRCS +=			\
 				t_tab_thread.c \
 
 SRCS +=			\
-				get_next_line.c \
 
 SRCS +=			\
 				ft_basename.c \
