@@ -1,7 +1,7 @@
 #ifndef		GET_NEXT_LINE_H
 # define	GET_NEXT_LINE_H
 
-# define BUF_SIZE 1
+# define BUF_SIZE 4096
 
 # include <unistd.h>
 
