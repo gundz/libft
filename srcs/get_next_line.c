@@ -1,13 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fgundlac <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/03/24 16:14:54 by fgundlac          #+#    #+#             */
+/*   Updated: 2016/03/24 16:15:19 by fgundlac         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
-#include <stdio.h>
 #include <libft.h>
-
 #include <string.h>
-
 #include <stdlib.h>
 
-char *
-extract(char *buf, char **line)
+char				*extract(char *buf, char **line)
 {
 	int				i;
 	char			*tmp;
@@ -22,8 +30,7 @@ extract(char *buf, char **line)
 	return (buf);
 }
 
-int
-get_next_line(const int fd, char **line)
+int					get_next_line(const int fd, char **line)
 {
 	int				ret;
 	static char		*buf = "";
