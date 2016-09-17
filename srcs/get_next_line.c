@@ -30,23 +30,24 @@ char				*extract(char *buf, char **line)
 	return (buf);
 }
 
-int					do_something(int ret, char **buf, char (*tmp)[BUF_SIZE + 1], char ***line)
+int					do_something(int ret, char **buf,\
+	char (*tmp)[BUF_SIZE + 1], char ***line)
 {
 	char			*tmp2;
 
-		if (ret > 0)
-		{
-			tmp2 = *buf;
-			*buf = ft_strjoin(*buf, *tmp);
-			if (tmp2[0] != '\0')
-				free(tmp2);
-		}
-		if (ret == 0 && ft_strlen(*buf) > 0)
-		{
-			*buf = extract(*buf, *line);
-			return (1);
-		}
-		return (0);
+	if (ret > 0)
+	{
+		tmp2 = *buf;
+		*buf = ft_strjoin(*buf, *tmp);
+		if (tmp2[0] != '\0')
+			free(tmp2);
+	}
+	if (ret == 0 && ft_strlen(*buf) > 0)
+	{
+		*buf = extract(*buf, *line);
+		return (1);
+	}
+	return (0);
 }
 
 int					get_next_line(const int fd, char **line)
@@ -70,7 +71,6 @@ int					get_next_line(const int fd, char **line)
 		tmp[ret] = '\0';
 		if (do_something(ret, &buf, &tmp, &line) == 1)
 			return (1);
-
 	}
 	return (ret);
 }
